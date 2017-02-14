@@ -123,7 +123,7 @@ public class MyUI extends UI {
         return navigation;
     }
 
-    private Button getButton(String name, String view) {
+    private Button getButton(String name, final String view) {
         Button projects = new Button(name);
         projects.setSizeFull();
         projects.addClickListener(new Button.ClickListener() {

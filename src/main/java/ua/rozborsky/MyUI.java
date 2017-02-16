@@ -205,7 +205,8 @@ public class MyUI extends UI {
                 "overflow: auto;" +
                 "background-color: #3A3E47;" +
                 "color: #2D2D38;" +
-                "font-family: calibri; }");
+                "font-family: calibri; " +
+                "outline: none;}");
         styles.add(".mainLayout { " +
                 "background-color: #F9FFF1;");
         styles.add(".header { " +
@@ -225,7 +226,7 @@ public class MyUI extends UI {
         styles.add(".about { " +
                 "margin-left: 50px;" +
                 "font-size: 180%;");
-        styles.add(".position { " +
+        styles.add(".position, .projectsDescription { " +
                 "font-size: 150%;");
         styles.add(".rightPart { " +
                 "padding: 50px;" +
@@ -237,10 +238,11 @@ public class MyUI extends UI {
                 "margin-top: 30px;");
         styles.add(".socialLabel {" +
                 "margin-top: 50px;}");
-        styles.add(".project {" +
+        styles.add(".project, .linkGithub, .linkProject{" +
                 "font-size: 110%;" +
                 "word-break: normal;" +
-                "line-height: 1.4;}");
+                "line-height: 1.4;" +
+                "text-decoration: none;;}");
 
         styles.add(".Facebook {" +
                 "background: #383838;}");

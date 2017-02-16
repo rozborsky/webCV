@@ -1,5 +1,6 @@
 package ua.rozborsky.classes;
 
+import com.vaadin.event.FieldEvents;
 import com.vaadin.server.*;
 import com.vaadin.ui.*;
 
@@ -10,11 +11,20 @@ import java.io.File;
  */
 public class CV{
     public CV() {
-        Window window = new Window();
-        window.setWidth("90%");
+        final Window window = new Window();
+        window.setWidth("80%");
         window.setHeight("100%");
+        window.addBlurListener(new FieldEvents.BlurListener() {
+
+            @Override
+            public void blur(FieldEvents.BlurEvent event) {
+                window.close();
+
+            }
+        });
         String basePath = VaadinService.getCurrent().getBaseDirectory().getAbsolutePath();
-        BrowserFrame frame = new BrowserFrame("Rozborsky_Roman", new FileResource(new File(basePath + "/WEB-INF/cv/Rozborsky_Roman_Junior_Java_Developer.pdf")));
+        BrowserFrame frame = new BrowserFrame("Rozborsky_Roman", new FileResource(new File(basePath +
+                "/WEB-INF/cv/Rozborsky_Roman_Junior_Java_Developer.pdf")));
         frame.setWidth("100%");
         frame.setHeight("100%");
         window.setContent(frame);

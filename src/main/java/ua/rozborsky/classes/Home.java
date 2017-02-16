@@ -3,7 +3,6 @@ package ua.rozborsky.classes;
 import com.vaadin.navigator.View;
 import com.vaadin.navigator.ViewChangeListener;
 import com.vaadin.server.FileResource;
-import com.vaadin.server.Page;
 import com.vaadin.server.VaadinService;
 import com.vaadin.ui.*;
 
@@ -20,26 +19,20 @@ public class Home  extends VerticalLayout implements View {
 
     @Override
     public void enter(ViewChangeListener.ViewChangeEvent event) {
-        //Notification.show("Welcome to the Animal Farm");
     }
 
     private Layout content() {
         HorizontalLayout content = new HorizontalLayout();
-        content.setWidth("100%");
+        content.setSizeFull();
         content.setStyleName("content");
 
         Image photo = image();
-        content.addComponent(photo);
-
         Layout aboutMe = aboutMe();
+        content.addComponent(photo);
         content.addComponent(aboutMe);
 
-        Layout social = social();
-        content.addComponent(social);
-
-        content.setExpandRatio(photo, 2);
-        content.setExpandRatio(aboutMe, 4);
-        content.setExpandRatio(social, 2.5f);
+        content.setExpandRatio(photo, 1);
+        content.setExpandRatio(aboutMe, 2);
 
         return content;
     }
@@ -75,53 +68,7 @@ public class Home  extends VerticalLayout implements View {
         Image image = new Image("", resource);
         image.setStyleName("photo");
         image.setWidth("80%");
+
         return image;
-    }
-
-
-    private Layout social() {
-        VerticalLayout social = new VerticalLayout();
-        social.addComponent(new Label("You can find me in social networks"));
-
-        social.addComponent(buttonFacebook());
-        social.addComponent(buttonLinkedin());
-
-        social.addStyleName("social");
-
-        return social;
-    }
-
-    private Button buttonLinkedin() {
-        Button button = new Button("Roman Rozborsky");
-        button.setStyleName("buttonLinkedin");
-        button.setWidth("70%");
-        button.setHeight("40px");
-        String basePath = VaadinService.getCurrent().getBaseDirectory().getAbsolutePath();
-        button.setIcon(new FileResource(new File(basePath + "/WEB-INF/images/linkedin.png")));
-        button.addClickListener(new Button.ClickListener() {
-            @Override
-            public void buttonClick(Button.ClickEvent clickEvent) {
-                Page.getCurrent().open("https://ua.linkedin.com/in/roman-rozborsky-4ab000105", null);
-            }
-        });
-
-        return button;
-    }
-
-    private Button buttonFacebook() {
-        Button button = new Button("Roman Rozborsky");
-        button.setStyleName("buttonFacebook");
-        button.setWidth("70%");
-        button.setHeight("40px");
-        String basePath = VaadinService.getCurrent().getBaseDirectory().getAbsolutePath();
-        button.setIcon(new FileResource(new File(basePath + "/WEB-INF/images/facebook.png")));
-        button.addClickListener(new Button.ClickListener() {
-            @Override
-            public void buttonClick(Button.ClickEvent clickEvent) {
-                Page.getCurrent().open("https://www.facebook.com/roman.rozborsky", null);
-            }
-        });
-
-        return button;
     }
 }

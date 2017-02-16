@@ -24,7 +24,6 @@ public class Home  extends VerticalLayout implements View {
     private Layout content() {
         HorizontalLayout content = new HorizontalLayout();
         content.setSizeFull();
-        content.setStyleName("content");
 
         Image photo = image();
         Layout aboutMe = aboutMe();

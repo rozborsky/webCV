@@ -25,7 +25,6 @@ public class MyUI extends UI {
         navigator = new Navigator(this, content);
         navigator.addView("", new Home());
         navigator.addView("projects", new Projects());
-
         styles();
         VerticalLayout screen = new VerticalLayout();
         screen.setSizeFull();
@@ -62,6 +61,7 @@ public class MyUI extends UI {
 
     private VerticalLayout leftPart() {
         VerticalLayout verticalLayout = new VerticalLayout();
+        content.setStyleName("content");
 
         HorizontalLayout header = header();
         verticalLayout.addComponents(header, content);
@@ -237,6 +237,10 @@ public class MyUI extends UI {
                 "margin-top: 30px;");
         styles.add(".socialLabel {" +
                 "margin-top: 50px;}");
+        styles.add(".project {" +
+                "font-size: 110%;" +
+                "word-break: normal;" +
+                "line-height: 1.4;}");
 
         styles.add(".Facebook {" +
                 "background: #383838;}");

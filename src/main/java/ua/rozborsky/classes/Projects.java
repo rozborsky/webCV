@@ -18,14 +18,17 @@ public class Projects  extends VerticalLayout implements View {
         verticalLayout.setStyleName("layout");
         verticalLayout.setSizeFull();
 
-        Label label = new Label("You can see a more detailed description of the projects, if you click on the project name");
-        label.setStyleName("projectsDescription");
-        label.setSizeUndefined();
+        Label about = new Label("You can see a more detailed description of the projects, if you click on the project name");
+        about.setStyleName("projectsDescription");
+        about.setSizeUndefined();
 
-        verticalLayout.addComponent(label);
-        verticalLayout.addComponent(table);
-        verticalLayout.setComponentAlignment(label, Alignment.TOP_CENTER);
+        Label designer = new Label("I'm not a designer, so the look of my projects could be better :)");
+        designer.setSizeUndefined();
+
+        verticalLayout.addComponents(about, table, designer);
+        verticalLayout.setComponentAlignment(about, Alignment.TOP_CENTER);
         verticalLayout.setComponentAlignment(table, Alignment.TOP_CENTER);
+        verticalLayout.setComponentAlignment(designer, Alignment.BOTTOM_CENTER);
 
         addComponent(verticalLayout);
     }
@@ -66,7 +69,8 @@ public class Projects  extends VerticalLayout implements View {
                 "System installed on the toll road checkpoint.)" +
                 "Implements Passes and calculates the fee for use, depending on the traversed path"),
                 linkGithub("https://github.com/rozborsky/tollRoadClient.git")}, 6);
-        table.addItem(new Object[]{project("web CV"), label("this project"),
+        table.addItem(new Object[]{project("web CV"), label("This is the site where you are right now. " +
+                "Created using Vaadin framework"),
                 linkGithub("https://github.com/rozborsky/webCV.git")}, 7);
 
         return table;
@@ -87,14 +91,14 @@ public class Projects  extends VerticalLayout implements View {
         return link;
     }
 
-    private Button project(String name) {
+    private Button project(final String name) {
         Button button = new Button(name);
         button.setStyleName("quiet");
         button.setWidth("100%");
         button.addClickListener(new Button.ClickListener() {
             @Override
             public void buttonClick(Button.ClickEvent clickEvent) {
-                new Project();
+                new Project(name);
             }
         });
 

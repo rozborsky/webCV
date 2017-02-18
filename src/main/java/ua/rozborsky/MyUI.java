@@ -205,8 +205,7 @@ public class MyUI extends UI {
                 "overflow: auto;" +
                 "background-color: #3A3E47;" +
                 "color: #2D2D38;" +
-                "font-family: calibri; " +
-                "outline: none;}");
+                "font-family: calibri;}");
         styles.add(".mainLayout { " +
                 "background-color: #F9FFF1;");
         styles.add(".header { " +
@@ -233,11 +232,24 @@ public class MyUI extends UI {
                 "font-size: 180%;}");
         styles.add(".social {" +
                 "margin-top: 50px;}");
-        styles.add(".Linkedin, .Facebook { " +
-                "background-color: #007AB9;" +
+        styles.add(".Linkedin, .Facebook{ " +//
                 "margin-top: 30px;");
+        styles.add(".v-widget.Facebook{ " +//todo=============v-button.v-widget.Facebook.v-button-Facebook.v-has-width.v-has-height
+                "background:yellow;}");
+        styles.add(".v-widget.Linkedin{ " +//todo=============v-button.v-widget.Facebook.v-button-Facebook.v-has-width.v-has-height
+                "background:red;}");
         styles.add(".socialLabel {" +
                 "margin-top: 50px;}");
+        styles.add(".projectLayoutInWindow{" +
+                "margin: 0px 50px;}");
+        styles.add(".titleProject{" +
+                "margin: 50px;" +
+                "font-weight: 600;" +
+                "font-size: 200%;}");
+        styles.add(".windowProject{" +
+                "min-width: 1050px;}");
+
+
         styles.add(".project, .linkGithub, .linkProject{" +
                 "font-size: 110%;" +
                 "word-break: normal;" +

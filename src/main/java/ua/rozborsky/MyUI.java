@@ -232,12 +232,12 @@ public class MyUI extends UI {
                 "font-size: 180%;}");
         styles.add(".social {" +
                 "margin-top: 50px;}");
-        styles.add(".Linkedin, .Facebook{ " +//
+        styles.add(".Linkedin, .Facebook{ " +
                 "margin-top: 30px;");
-        styles.add(".v-widget.Facebook{ " +//todo=============v-button.v-widget.Facebook.v-button-Facebook.v-has-width.v-has-height
-                "background:yellow;}");
-        styles.add(".v-widget.Linkedin{ " +//todo=============v-button.v-widget.Facebook.v-button-Facebook.v-has-width.v-has-height
-                "background:red;}");
+        styles.add(".v-widget.Facebook{ " +
+                "background: #3B5998;}");
+        styles.add(".v-widget.Linkedin{ " +
+                "background: #007AB9;}");
         styles.add(".socialLabel {" +
                 "margin-top: 50px;}");
         styles.add(".projectLayoutInWindow{" +

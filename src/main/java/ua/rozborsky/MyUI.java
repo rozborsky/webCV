@@ -47,7 +47,7 @@ public class MyUI extends UI {
     private Layout mainLayout() {
         HorizontalLayout mainLayout = new HorizontalLayout();
         mainLayout.addStyleName("mainLayout");
-        mainLayout.setHeight("90%");
+       // mainLayout.setHeight("90%");
         mainLayout.setWidth("80%");
 
         VerticalLayout leftPart = leftPart();
@@ -205,22 +205,27 @@ public class MyUI extends UI {
                 "overflow: auto;" +
                 "background-color: #3A3E47;" +
                 "color: #2D2D38;" +
-                "font-family: calibri;}");
+                "font-family: arial;" +
+                "overflow-x: hidden;" +
+                "overflow-y: auto;}");
         styles.add(".mainLayout { " +
                 "background-color: #F9FFF1;");
         styles.add(".header { " +
-                "padding-left: 100px;" +
+                "padding-left: 80px;" +
                 "background-color: #383838; }");
         styles.add(".v-label-titleName, .v-label-titleSurname{ " +
                 "font-size: 400%;" +
                 "color:#F9FFF1; }");
-        styles.add(".v-label-titleSurname { font-weight: 600; }");
+        styles.add(".v-label-titleSurname { " +
+                "margin-left: 30px;" +
+                "font-weight: 600; }");
         styles.add(".content { " +
                 "margin-top: 50px;" +
+                "margin-bottom: 50px;" +
                 "border-right: 1px solid #383838;}");
         styles.add(".photo { " +
                 "margin: 50px;" +
-                "margin-top: 0px;" +
+                "margin-top: 60px;" +
                 "box-shadow: 0 0 10px rgba(0,0,0,0.5); }");
         styles.add(".about { " +
                 "margin-left: 50px;" +
@@ -240,28 +245,33 @@ public class MyUI extends UI {
                 "background: #007AB9;}");
         styles.add(".socialLabel {" +
                 "margin-top: 50px;}");
+        styles.add(".v-table-row {" +
+                "padding: 30px;}");
+        styles.add(".v-button.v-widget.buttonTable.v-button-buttonTable.v-has-width {" +
+                "font-weight: 600;}");
         styles.add(".projectLayoutInWindow{" +
-                "margin: 0px 50px;}");
+                "margin: 0% 5% 2% 5%;" +
+                "box-sizing: padding-box;" +
+                "word-wrap: break-word;" +
+                "overflow: hidden;}");
         styles.add(".titleProject{" +
                 "margin: 50px;" +
                 "font-weight: 600;" +
                 "font-size: 200%;}");
-        styles.add(".windowProject{" +
-                "min-width: 1050px;}");
+        styles.add(".v-table-cell-content{" +
+                "padding: 15px 0px;}");
 
 
         styles.add(".project, .linkGithub, .linkProject{" +
                 "font-size: 110%;" +
                 "word-break: normal;" +
                 "line-height: 1.4;" +
-                "text-decoration: none;;}");
-
-        styles.add(".Facebook {" +
-                "background: #383838;}");
-
-        styles.add(".Linkedin {" +
-                "background: #007AB9;}");
+                "text-decoration: none;}");
 
         return styles;
     }
 }
+
+
+
+//        і текст на 1-му треба скоротити та прибрати зайве

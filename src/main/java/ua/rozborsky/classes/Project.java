@@ -14,7 +14,8 @@ public class Project {
     public Project(String name) {
         final Window window = new Window();
         window.setWidth("70%");
-       // window.addStyleName("windowProject");
+
+        window.addStyleName("windowProject");
         window.addBlurListener(new FieldEvents.BlurListener() {
 
             @Override
@@ -30,24 +31,20 @@ public class Project {
         UI.getCurrent().addWindow(window);
     }
 
+
+
+
     private VerticalLayout content(String name) {
         VerticalLayout verticalLayout = new VerticalLayout();
-        verticalLayout.setSizeFull();
-        //verticalLayout.addStyleName("v-scrollable");
-
         verticalLayout.addStyleName("projectLayoutInWindow");
-        chooseContent(name, verticalLayout);
+        verticalLayout.setWidth("90%");
 
-        return verticalLayout;
-    }
-
-    private void chooseContent(String name, VerticalLayout verticalLayout) {
-        verticalLayout.setSizeUndefined();
         Label title = new Label(name);
         title.setStyleName("titleProject");
         verticalLayout.addComponent(title);
 
         if(name.equals("SQL CMD")) {
+
             Label description = new Label("My first project. Course work that has been done on online programming courses Juja. " +
                     "This is a console application that using only one tool of java core implements CRUD operations. " +
                     "Application working with PostgreSQL database.");
@@ -117,6 +114,8 @@ public class Project {
             Label description = new Label("This is the site where you are right now. Created using Vaadin framework");
             verticalLayout.addComponents(description);
         }
+
+        return verticalLayout;
     }
 
     private Image image(String project, String photo) {

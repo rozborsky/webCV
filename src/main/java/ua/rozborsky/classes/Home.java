@@ -42,11 +42,13 @@ public class Home  extends VerticalLayout implements View {
         layout.addComponent(position());
         layout.setWidth("80%");
         Label about = new Label(
-                "I study programming for 2 years. Graduated from Vinnitsa IT Academy, where I studied programing, " +
-                        "including C++, HTML, PHP, java-script. Last year working and graduated java online courses " +
-                        "\"Juja\". Now I self-learning java at home. " +
-                        "To improve knowledge independently develop small projects. Learn English. " +
-                        "Interesting in learning and professional development as a java developer.");
+                        "Hello, my name is Roman. I am very hardworking and promising java developer. " +
+                        "I learn programming for 2 years. Last year entirely devoted to the study java. " +
+                        "In Vinnitsa IT Academy studied the basics of programming. But my main line of development - is java. " +
+                        "Now to improve knowledge independently develop small projects and learn English. " +
+                        "You can appreciate my programming skills by watching my projects. " +
+                        "I live in Vinnitsa, but ready to relocate to to another city where I can progress " +
+                        "as a java developer.");
         layout.addComponent(about);
 
         return layout;

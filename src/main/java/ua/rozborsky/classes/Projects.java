@@ -62,7 +62,7 @@ public class Projects  extends VerticalLayout implements View {
         table.addItem(new Object[]{project("calculationPi"), label("Desktop application for calculation π. " +
                         "With limited memory get OutOfMemoryError, catch it and take calculated value"),
                 linkGithub("https://github.com/rozborsky/calculationPi")}, 4);
-        table.addItem(new Object[]{project("rss reader"), label("desktop application for reading news"),
+        table.addItem(new Object[]{project("rss reader"), label("Desktop application for reading news"),
                 linkGithub("https://github.com/rozborsky/rssReader")}, 5);
         table.addItem(new Object[]{project("toll road"), label("The system of payment for the use of toll roads. " +
                 "Includes a desktop client and server.\n" +
@@ -94,6 +94,7 @@ public class Projects  extends VerticalLayout implements View {
     private Button project(final String name) {
         Button button = new Button(name);
         button.setStyleName("quiet");
+        button.addStyleName("buttonTable");
         button.setWidth("100%");
         button.addClickListener(new Button.ClickListener() {
             @Override

@@ -15,7 +15,6 @@ public class Project {
         final Window window = new Window();
         window.setWidth("70%");
 
-        window.addStyleName("windowProject");
         window.addBlurListener(new FieldEvents.BlurListener() {
 
             @Override
@@ -30,9 +29,6 @@ public class Project {
         window.setModal(true);
         UI.getCurrent().addWindow(window);
     }
-
-
-
 
     private VerticalLayout content(String name) {
         VerticalLayout verticalLayout = new VerticalLayout();
@@ -72,13 +68,19 @@ public class Project {
         } else if(name.equals("calculationPi")) {
             Label description = new Label("Desktop application for calculation π. " +
                     "With limited memory get OutOfMemoryError, catch it and take calculated value");
+            Label withoutLimit = new Label("If memory is not limited - " +
+                    "application calculate and show nearly 280000 numbers of number π");
+            Label limitedMemory = new Label("If memory is limited 8mB- application calculate nearly 240000 numbers of of number π," +
+                    " throw OutOfMemoryError and show calculated value");
             verticalLayout.addComponents(
                     description,
                     image("calculationPi", "start.jpg"),
+                    withoutLimit,
                     image("calculationPi", "normalFinish.jpg"),
+                    limitedMemory,
                     image("calculationPi", "lowMemory.jpg"));
         } else if(name.equals("rss reader")) {
-            Label description = new Label("Desctop application, which is designed to get the latest news from news sites " +
+            Label description = new Label("Desktop application, which is designed to get the latest news from news sites " +
                     "that support rss feeds. Allows you to add and remove rss channels. " +
                     "Clicking on the news in the program - news opens in the browser window");
             verticalLayout.addComponents(

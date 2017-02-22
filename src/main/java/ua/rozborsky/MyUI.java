@@ -47,7 +47,6 @@ public class MyUI extends UI {
     private Layout mainLayout() {
         HorizontalLayout mainLayout = new HorizontalLayout();
         mainLayout.addStyleName("mainLayout");
-       // mainLayout.setHeight("90%");
         mainLayout.setWidth("80%");
 
         VerticalLayout leftPart = leftPart();
@@ -99,7 +98,6 @@ public class MyUI extends UI {
     private VerticalLayout rightPart() {
         VerticalLayout verticalLayout = new VerticalLayout();
         verticalLayout.setStyleName("rightPart");
-        verticalLayout.setHeight("100%");
 
         HorizontalLayout navigation = navigation();
         VerticalLayout social = social();
@@ -167,7 +165,6 @@ public class MyUI extends UI {
 
     private Button getButtonCV() {
         final Button cv = new Button("CV");
-        cv.setStyleName("navigation");
         cv.setWidth("100%");
         cv.setHeight("50px");
         cv.addClickListener(new Button.ClickListener() {
@@ -205,46 +202,46 @@ public class MyUI extends UI {
                 "overflow: auto;" +
                 "background-color: #3A3E47;" +
                 "color: #2D2D38;" +
-                "font-family: arial;" +
-                "overflow-x: hidden;" +
-                "overflow-y: auto;}");
+                "font-family: arial;}");
         styles.add(".mainLayout { " +
-                "background-color: #F9FFF1;");
-        styles.add(".header { " +
-                "padding-left: 80px;" +
-                "background-color: #383838; }");
-        styles.add(".v-label-titleName, .v-label-titleSurname{ " +
-                "font-size: 400%;" +
-                "color:#F9FFF1; }");
-        styles.add(".v-label-titleSurname { " +
-                "margin-left: 30px;" +
-                "font-weight: 600; }");
+                "background-color: #F9FFF1;}");
         styles.add(".content { " +
                 "margin-top: 50px;" +
                 "margin-bottom: 50px;" +
                 "border-right: 1px solid #383838;}");
-        styles.add(".photo { " +
-                "margin: 50px;" +
-                "margin-top: 60px;" +
-                "box-shadow: 0 0 10px rgba(0,0,0,0.5); }");
-        styles.add(".about { " +
-                "margin-left: 50px;" +
-                "font-size: 180%;");
-        styles.add(".position, .projectsDescription { " +
-                "font-size: 150%;");
+        styles.add(".header { " +
+                "padding-left: 80px;" +
+                "background-color: #383838;}");
         styles.add(".rightPart { " +
                 "padding: 50px;" +
                 "font-size: 180%;}");
         styles.add(".social {" +
                 "margin-top: 50px;}");
+        styles.add(".socialLabel {" +
+                "margin-top: 50px;}");
+        styles.add(".v-label-titleName, .v-label-titleSurname{ " +
+                "font-size: 400%;" +
+                "color:#F9FFF1;}");
+        styles.add(".v-label-titleSurname { " +
+                "margin-left: 30px;" +
+                "font-weight: 600;}");
+        styles.add(".about { " +
+                "margin-left: 50px;" +
+                "font-size: 180%;");
+        styles.add(".position, .projectsDescription { " +
+                "width: 90%;" +
+                "font-size: 150%;" +
+                "word-wrap: break-word;}");
+        styles.add(".photo { " +
+                "margin: 50px;" +
+                "margin-top: 60px;" +
+                "box-shadow: 0 0 10px rgba(0,0,0,0.5); }");
         styles.add(".Linkedin, .Facebook{ " +
                 "margin-top: 30px;");
         styles.add(".v-widget.Facebook{ " +
                 "background: #3B5998;}");
         styles.add(".v-widget.Linkedin{ " +
                 "background: #007AB9;}");
-        styles.add(".socialLabel {" +
-                "margin-top: 50px;}");
         styles.add(".v-table-row {" +
                 "padding: 30px;}");
         styles.add(".v-button.v-widget.buttonTable.v-button-buttonTable.v-has-width {" +
@@ -260,8 +257,6 @@ public class MyUI extends UI {
                 "font-size: 200%;}");
         styles.add(".v-table-cell-content{" +
                 "padding: 15px 0px;}");
-
-
         styles.add(".project, .linkGithub, .linkProject{" +
                 "font-size: 110%;" +
                 "word-break: normal;" +
@@ -273,5 +268,3 @@ public class MyUI extends UI {
 }
 
 
-
-//        і текст на 1-му треба скоротити та прибрати зайве

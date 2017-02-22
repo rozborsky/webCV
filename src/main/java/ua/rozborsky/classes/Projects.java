@@ -15,19 +15,18 @@ public class Projects  extends VerticalLayout implements View {
 
         Table table = table();
         VerticalLayout verticalLayout = new VerticalLayout();
-        verticalLayout.setStyleName("layout");
         verticalLayout.setSizeFull();
 
         Label about = new Label("You can see a more detailed description of the projects, if you click on the project name");
         about.setStyleName("projectsDescription");
-        about.setSizeUndefined();
+        about.setWidth("90%");
 
         Label designer = new Label("I'm not a designer, so the look of my projects could be better :)");
         designer.setSizeUndefined();
 
         verticalLayout.addComponents(about, table, designer);
         verticalLayout.setComponentAlignment(about, Alignment.TOP_CENTER);
-        verticalLayout.setComponentAlignment(table, Alignment.TOP_CENTER);
+        verticalLayout.setComponentAlignment(table, Alignment.MIDDLE_CENTER);
         verticalLayout.setComponentAlignment(designer, Alignment.BOTTOM_CENTER);
 
         addComponent(verticalLayout);

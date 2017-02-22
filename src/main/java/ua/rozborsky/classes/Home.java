@@ -57,6 +57,7 @@ public class Home  extends VerticalLayout implements View {
     private Layout position() {
         HorizontalLayout layout = new HorizontalLayout();
         layout.setStyleName("position");
+        layout.setWidth("100%");
         layout.addComponent(new Label("JUNIOR JAVA DEVELOPER"));
 
         return layout;
